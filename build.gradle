@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    // https://mvnrepository.com/artifact/org.apache.camel/camel-core
+    implementation group: 'org.apache.camel', name: 'camel-core', version: '3.13.0'
+    // https://mvnrepository.com/artifact/org.apache.camel/camel-undertow
+    implementation group: 'org.apache.camel', name: 'camel-undertow', version: '3.13.0'
+    // https://mvnrepository.com/artifact/org.apache.camel/camel-netty-http
+    implementation group: 'org.apache.camel', name: 'camel-netty-http', version: '3.13.0'
+    // https://mvnrepository.com/artifact/org.apache.camel/camel-jetty
+    implementation group: 'org.apache.camel', name: 'camel-jetty', version: '3.13.0'
+    // https://mvnrepository.com/artifact/org.apache.camel/camel-platform-http
+    implementation group: 'org.apache.camel', name: 'camel-platform-http', version: '3.13.0'
+    // https://mvnrepository.com/artifact/org.apache.camel/camel-platform-http-vertx
+    implementation group: 'org.apache.camel', name: 'camel-platform-http-vertx', version: '3.13.0'
+    // https://mvnrepository.com/artifact/org.apache.camel/camel-servlet
+    implementation group: 'org.apache.camel', name: 'camel-servlet', version: '3.13.0'
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.32'
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.32'
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.0'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
