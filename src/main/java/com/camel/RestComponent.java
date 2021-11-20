@@ -2,27 +2,27 @@ package com.camel;
 
 /**
  * Enum which specifies which Camel DSL component should be used.
- * Used in {@link com.camel.RestConfigRoute} constructor.
- * See {@linktourl https://camel.apache.org/manual/rest-dsl.html}.
+ * Used in {@link RestConfigRoute} constructor.
+ * See {@link <a href="https://camel.apache.org/manual/rest-dsl.html">...</a>}.
  */
 public enum RestComponent {
 
     /**
-     * See {@linktourl https://camel.apache.org/components/3.13.x/netty-http-component.html}
-     */
-    NETTY_HTTP("netty-http"),
-    /**
-     * See {@linktourl https://camel.apache.org/components/3.13.x/jetty-component.html}
+     * See {@link https://camel.apache.org/components/3.13.x/jetty-component.html}
      */
     JETTY("jetty"),
     /**
-     * See {@linktourl https://camel.apache.org/components/3.13.x/undertow-component.html}
+     * See {@link <a href="https://camel.apache.org/components/3.13.x/netty-http-component.html">...</a>}
      */
-    UNDERTOW("undertow"),
+    NETTY_HTTP("netty-http"),
     /**
-     * See {@linktourl https://camel.apache.org/components/3.13.x/platform-http-component.html}
+     * See {@link <a href="https://camel.apache.org/components/3.13.x/platform-http-component.html">...</a>}
      */
-    PLATFORM_HTTP("platform-http");
+    PLATFORM_HTTP("platform-http"),
+    /**
+     * See {@link <a href="https://camel.apache.org/components/3.13.x/undertow-component.html">...</a>}
+     */
+    UNDERTOW("undertow");
 
     private final String camelComponent;
 

@@ -5,7 +5,7 @@ import org.apache.camel.impl.DefaultCamelContext;
 
 /**
  * Main class to study and learn Apache Camel.
- * As always, read the docs! {@linktourl https://camel.apache.org/docs/}
+ * As always, read the docs! {@link <a href="https://camel.apache.org/docs/">...</a>}
  */
 public class ApacheCamelSandbox {
 
