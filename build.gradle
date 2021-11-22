@@ -32,6 +32,11 @@ dependencies {
     implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.32'
     // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.0'
+    // https://mvnrepository.com/artifact/org.apache.camel.quarkus/camel-quarkus-xml-io-dsl
+    implementation group: 'org.apache.camel.quarkus', name: 'camel-quarkus-xml-io-dsl', version: '2.4.0'
+    // https://mvnrepository.com/artifact/org.apache.camel.quarkus/camel-quarkus-yaml-dsl
+    implementation group: 'org.apache.camel.quarkus', name: 'camel-quarkus-yaml-dsl', version: '2.4.0'
+
 
 
 }

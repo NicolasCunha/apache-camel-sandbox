@@ -5,7 +5,7 @@ import org.apache.camel.impl.DefaultCamelContext;
 
 /**
  * Main class to study and learn Apache Camel.
- * As always, read the docs! {@link <a href="https://camel.apache.org/docs/">...</a>}
+ * As always, <a href="https://camel.apache.org/docs/">read the docs!</a>
  */
 public class ApacheCamelSandbox {
 
@@ -35,8 +35,21 @@ public class ApacheCamelSandbox {
         /* This route is wire-tapped from the HtmlHelloWorldRoute route. */
         camelContext.addRoutes(new JsonHelloWorldRoute());
 
+        /* Create a route from a String containing XML DSL. */
+        /* Requires a Camel XML parser. In this example we are using 'camel-quarkus-xml-io-dsl'. */
+        /* https://mvnrepository.com/artifact/org.apache.camel.quarkus/camel-quarkus-xml-io-dsl */
+        final String xmlDsl = SandboxUtils.getSampleRouteXmlDsl();
+        camelContext.addRoutes(new StringRoute(xmlDsl, "xml"));
+
+        /* Create a route from a String containing YAML DSL. */
+        /* Requires a Camel YAML parser. In this example we are using 'camel-quarkus-yaml-dsl'. */
+        /* https://mvnrepository.com/artifact/org.apache.camel.quarkus/camel-quarkus-yaml-dsl */
+        final String yamlDsl = SandboxUtils.getSampleRouteYamlDsl();
+        camelContext.addRoutes(new StringRoute(yamlDsl, "yaml"));
+
         camelContext.start();
 
     }
+
 
 }
