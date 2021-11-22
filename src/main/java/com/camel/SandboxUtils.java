@@ -1,5 +1,8 @@
 package com.camel;
 
+/**
+ * Utilities class.
+ */
 public class SandboxUtils {
 
     private SandboxUtils() {
