@@ -16,7 +16,7 @@ public class HtmlHelloWorldRoute extends RouteBuilder {
                 .setHeader("Content-Type", constant("text/html"))
                 /* Write a log which will show the message ID and body. */
                 .log("Request ${id}, Body: ${body}")
-                /* Forward the message to 'log' component named 'html-hello-world-log'. */
+                /* Forward the message to 'log' component named 'html-hello-world-log-input'. */
                 /* This is different from using log() method, since the log() method */
                 /* will use an underlying SLF4J config to determine where and how logs will be written. */
                 /* https://camel.apache.org/components/3.12.x/log-component.html */
@@ -38,7 +38,7 @@ public class HtmlHelloWorldRoute extends RouteBuilder {
                 .process(exchange -> exchange.getMessage().setBody(("Hello, world!")))
                 /* Write a log which will show the message ID and body. */
                 .log("Response ${id}, Body: ${body}")
-                /* Forward the message to 'log' component named 'html-hello-world-log'. */
+                /* Forward the message to 'log' component named 'html-hello-world-log-output'. */
                 .to("log:html-hello-world-log-output")
                 /* Forward the message to 'file' component under directory 'message-output'. */
                 /* The filename will be 'output_<ID>', where ID is the message id. */
