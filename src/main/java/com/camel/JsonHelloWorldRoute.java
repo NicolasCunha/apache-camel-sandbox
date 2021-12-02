@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Camel route which returns 'Hello, earth!' in 'text/html', generate files and logs.
+ * Camel route which returns 'Hello, earth!' in 'application/json', generate files and logs.
  */
 public class JsonHelloWorldRoute extends RouteBuilder {
     @Override
